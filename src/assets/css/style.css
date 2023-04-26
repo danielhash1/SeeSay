@@ -1,0 +1,287 @@
+.container {
+    margin: 5%;
+
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+
+    height: 200vh;
+
+    background: linear-gradient(116.42deg, #141414 -7.43%, #6E6E6E 107.92%, #FFFFFF 293.96%);
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 1px solid #777777;;
+}
+
+header img {
+    width: 89px;
+    height: 63px;
+    
+    padding: 2vh;
+}
+
+.hero-part {
+  display: flex;
+}
+
+
+/* left part of hero */
+
+.left-part {
+  position: relative;
+  width: 50%;
+}
+
+.text-overlay h1 {
+  font-size: 79px;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+}
+
+.text-n-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 4em;
+  right: 0;
+  top: 6em;
+
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.button-container {
+  position: relative;
+  margin-left: 10%;
+  margin-top: 15%;
+  display: flex;
+
+
+}
+
+.button-container button {
+  background-color: #6f00ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 19px;
+  width: 248px;
+  height: 93px;
+  border: none;
+  font-size: 28px;
+
+
+  
+  transition-duration: 0.4s;
+}
+.button-container button:hover,
+.button-container button:focus {
+  cursor: pointer;
+
+
+  color:#ffffff;
+  background-color: #5000b9;
+}
+
+.button-hero {
+  color: #dfdfdf;
+}
+
+
+#btn1 {
+  margin-right: 62px;
+}
+
+  /* right-container */
+
+.right-part {
+  position: relative;
+  width: 50%;
+  
+}
+
+
+.chat-images {
+  position: absolute;
+  margin-left: 5em;
+}
+
+.chat-img {
+  position: absolute;
+
+}
+
+.img1 {
+  z-index: 1;
+  left: 0;
+  top: 10em;
+}
+
+.img2 {
+  left: 35em;
+  z-index: 2;
+}
+.img3 {
+  z-index: 3;
+  top: 33em;
+  right: -174px;
+}
+
+.under-img-txt {
+  bottom: -12%;
+  right: 1em;
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 40px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+
+/* modal windows */
+
+/* JOIN GROUP */
+
+#modal-container-join,
+#modal-container-create {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 2 2 100px rgba(0, 0, 0, 0.3);;
+  z-index: 999;
+  transition: opacity 0.3s ease-in-out;
+  
+}
+
+#modal-content1,
+#modal-content2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333333;
+  padding: 5em 10em;
+  border-radius: 32px;
+  text-align: center;
+
+}
+
+.modal-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #aaa;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  transition-duration: 0.4s;
+  margin: 10px 25px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: rgb(236, 236, 236);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* JOIN FORM */
+
+.login-form1,
+.login-form2 {
+  display: grid;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 1em;
+  border-color: none;
+}
+
+.username-form {
+  margin-bottom: 0.5em;
+}
+
+input[type=text] {
+  padding: 8px 12px;
+  transition-duration: 0.4s;
+
+  color: white;
+  border: 2px solid #444444;
+  background-color: #616161;
+  font-family: 'JetBrains Mono', monospace;
+  caret-color: white;
+}
+input[type=text]:hover,
+input[type=text]:focus {
+  border-color: #65D7D7;
+}
+
+.pass-code,
+.room-name {
+  margin-bottom: 0.5em;
+  margin-top: 3em;
+}
+
+.join-button,
+.create-button {
+  margin-top: 5em;
+  padding: 10px 10px;
+  
+  border: none;
+  background-color: #6f00ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 19px;
+  color: white;
+  border: none;
+  font-size: 20px;
+  transition-duration: 0.4s;
+}
+.join-button:hover,
+.join-button:focus,
+.create-button:hover,
+.create-button:focus {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+/* Talk Room */
+.second-page {
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+
+  height: 200vh;
+  background: linear-gradient(155.88deg, #141414 10.73%, rgba(20, 20, 20, 0) 228.53%);
+}
