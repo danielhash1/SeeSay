@@ -2,7 +2,7 @@
   "devDependencies": {
     "parcel": "^2.8.3"
   },
-  "homepage": "https://danielhash1.github.io/SeeSay",
+  "homepage": "https://github.com/danielhash1/SeeSay.git",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
