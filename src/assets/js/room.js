@@ -10,6 +10,8 @@ const rommCode = userDataJSON['roomcode'];
 
 document.title = roomName + ' Room';
 
+
+
 // camera access
 
 
@@ -53,3 +55,8 @@ window.addEventListener("load", () => {
     }, 2500);
   });
 
+
+
+// Room Name
+
+document.getElementById('roomName-info').innerText = roomName;
