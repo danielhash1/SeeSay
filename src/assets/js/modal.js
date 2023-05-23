@@ -1,4 +1,18 @@
+// // page loader
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
 
+  setTimeout(function() {
+    loader.classList.add('loader--hidden');
+  }, 1000);
+
+
+  // loader removing, AND I don't really need it
+  
+  // setTimeout(function() {
+  //   document.body.removeChild(loader);
+  // }, 2500)
+});
 
 const modal1 = document.getElementById('modal-container-join');
 const modal2 = document.getElementById('modal-container-create');
@@ -36,10 +50,12 @@ window.onclick = function(event) {
   }
 
 
-// logging of forms
+// 
+// Join form
+// 
 
-//  Join form
 const formJoin = document.querySelector('#form-join');
+const loader = document.querySelector('.loader');
 
 formJoin.addEventListener('submit', (event) => {
   event.preventDefault(); // prevent form from submitting
@@ -52,12 +68,22 @@ formJoin.addEventListener('submit', (event) => {
   console.log('username:', username);
   console.log('room:', roomCode);
 
+  const formData = {
+    username: username,
+    roomcode: roomCode
+  }
+
   localStorage.setItem('user-data-join', JSON.stringify(formData));
 
   // redirect
   window.location.href = "room-page.html";
 
 });
+
+
+// 
+// Create form
+// 
 
 const formCreate = document.querySelector('#form-create');
 
@@ -78,9 +104,11 @@ formCreate.addEventListener('submit', (event) => {
 
   console.log('The room was created!');
 
+  window.location.href = 'room-page.html';
   // redirect
-  window.location.href = 'room-page.html'
 });
+
+// // page loader
 
 
 // Redirect

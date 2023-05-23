@@ -18,6 +18,43 @@ body {
     background: linear-gradient(116.42deg, #141414 -7.43%, #6E6E6E 107.92%, #FFFFFF 293.96%);
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c0c0c;
+  transition: opacity 1s, visibility 1s;
+  z-index: 6;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 3px solid #999999;
+  border-top-color: #d400ff;
+  border-radius: 50%;
+  animation: loading 0.9s ease infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 
 /* header */
 header {
@@ -128,17 +165,17 @@ header img {
 }
 
 .img1 {
-  z-index: 1;
+  /* z-index: 1; */
   left: 0;
   top: 10em;
 }
 
 .img2 {
   left: 35em;
-  z-index: 2;
+  /* z-index: 2; */
 }
 .img3 {
-  z-index: 3;
+  /* z-index: 3; */
   top: 33em;
   right: -174px;
 }
@@ -170,9 +207,27 @@ header img {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 2 2 100px rgba(0, 0, 0, 0.3);;
-  z-index: 999;
   transition: opacity 0.3s ease-in-out;
+  animation: fadeIn 0.5s;
+  z-index: 7;
+}
   
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 #modal-content1,
@@ -199,12 +254,12 @@ header img {
   right: 0;
   cursor: pointer;
   font-size: 1.5em;
-  color: #aaa;
   float: right;
   font-size: 35px;
   font-weight: bold;
   transition-duration: 0.4s;
   margin: 10px 25px;
+  color: #969696;
 }
 
 .close-modal:hover,
@@ -274,7 +329,8 @@ input[type=text]:focus {
 }
 
 
-/* Talk Room */
+/* Room */
+
 .second-page {
 
   margin: 0;
@@ -284,4 +340,39 @@ input[type=text]:focus {
 
   height: 200vh;
   background: linear-gradient(155.88deg, #141414 10.73%, rgba(20, 20, 20, 0) 228.53%);
+}
+
+#cameras {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+  margin-top: 10%;
+}
+
+.camera-player {
+  height: 600px;
+
+
+  border-radius: 30px;
+  background-color: #141414;
+}
+
+.button-leave {
+  margin: 0 auto;
+  display: block;
+  margin-top: 10em;
+
+  color: aliceblue;
+  background-color: #ff0000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 19px;
+  padding: 1em 2em;
+  border: none;
+  font-size: 28px;
+
+
+  
+  transition-duration: 0.4s;
 }

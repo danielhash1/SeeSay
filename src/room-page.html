@@ -8,10 +8,20 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">    
     <link rel="icon" type="image/svg+xml" href="./assets/img/eye-svg.svg">
+
 </head>
 <body class="second-page">
-    <a href="./src/index.html">
-    <button>Return</button>
+
+    <div class="loader" id="loader-id"></div>
+
+    <div id="cameras">
+        <video class="camera-player" id="user-1" autoplay playsinline></video>
+        <video class="camera-player" id="user-2" autoplay playsinline></video>
+    </div>
+
+    <a href="/src/index.html">
+    <button class="button-leave">Leave</button>
+
     <script src="./assets/js/room.js"></script>
 </body>
 </html>
